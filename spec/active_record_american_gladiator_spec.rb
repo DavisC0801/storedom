@@ -8,7 +8,7 @@ describe "ActiveRecord American Gladiator" do
       Item.create(name: "Crash Pad", status: "inactive")
 
       # Changeable Start
-      items = Item.all
+      items = Item.all.only(:select)
       # Changeable End
 
       expect(items.count).to eq 3
